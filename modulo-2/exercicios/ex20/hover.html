@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        div > p { /* relativo a filha(p) da div */
+            display: none; /* não exibe */
+        }
+        div:hover > p{ /* relativo a filha(p) da div: hover */
+            display: block; /* exibe na tela*/
+            width: 200 px;
+            color: black;
+            background-color: yellow;
+        }
+        div:hover{ /* quando passa o mouse em cima */
+            color: red; /* troca o texto para vermelho*/ 
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Hover</h1>
+        <p>Passe o mouse sobre o texto abaixo</p>
+    <div>
+        Passe o mouse aqui!
+        <p>TEXTO ESCONDIDO :o</p>
+    </div>
+    Fim do exemplo. 
+</body>
+</html>
