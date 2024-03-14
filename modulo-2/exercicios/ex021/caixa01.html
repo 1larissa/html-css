@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-bt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Model</title>
+    <style>
+        h1{
+            background-color: lightpink;
+            display: in;
+            height: 300px;
+            width: 300px;
+
+            /* Shorthand BORDER */
+            border: 10px solid lightpink;
+            /*
+            border-width: 10px;
+            border-style: solid;
+            border-color:deeppink;
+            */
+
+            /* Shorthand PADDING */
+            /* padding: 20px 20px 20px 20px;*/
+            /* Se todos os elementos do padding forem iguais, pode declarar de uma vez só */
+            padding: 20px;
+            /*           
+            padding-top: 20px;
+            padding-right: 20px;  
+            padding-bottom: 20px;
+            padding-left: 20px;
+            */
+
+            /* Shorthand MARGIN 
+            margin: 15px 15px 15px 15px;
+            */
+            /* margin: 15px auto 15px auto; Dessa forma centraliza automaticamente a esquerda e direita */
+            margin: 55px;
+            /*
+            margin-top: 20px;
+            margin-right: 20px;
+            margin-bottom: 20px;
+            margin-left: 20px;
+            */
+            /* margin: auto;(centraliza na tela)*/
+
+            /* Shorthand OUTLINE */ 
+            outline: 15px dotted fuchsia;
+            /*
+            outline-width: 5px;
+            outline-style: dotted;
+            outline-color: fuchsia;
+            */
+        }
+
+
+        a{
+            border: 20px dotted plum;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de modelo de caixa</h1>
+    <p>Parágrafos são exemplos e box-level, mas os <a href="#">links são exemplos de caixas inline-level</a>. Vamos ver como tudo isso funciona.</p> 
+
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang = "pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Grouping tags</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+	<style>
+		body{
+			font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+			background-color: pink;
+			margin: 0px;
+		}
+		
+		header{
+			background-color: white;
+			padding:10px;
+			margin:10px;
+		}
+
+		nav{
+			background-color: lightseagreen;
+			padding: 5px;
+			box-shadow: 2px 2px 2px 0px rgba(0, 0, 0, 0.361);
+		}
+
+		nav > a{
+			text-decoration: none;
+			color: white;
+			font-weight: bold;						
+			margin-right: 10px;
+		}
+
+		nav > a:hover{
+			text-decoration: underline;
+		}
+
+		main{
+			background-color: white;
+			padding:10px;
+			margin:10px;	
+			border-radius: 0px 24px;
+			box-shadow: 4px 4px 9px 0px rgba(0, 0, 0, 0.346);	
+		}
+		
+		article{
+			background-color: lightblue;
+		}
+
+		article > aside{
+			background-color: lightgreen;
+		}
+		
+		footer{
+			background-color: lightgray;
+			text-align: center;
+			padding:4px;
+			margin: 0px;				
+		}
+
+		footer > p{
+			margin: 0px;
+		}
+
+		div#bola{
+			height: 100px;
+			width: 100px;
+			margin: 10px;
+			background-color: white;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+
+<body>
+	<header>
+		<h1>Meu site</h1>
+		<nav>
+			<a href = "#">Link</a>
+			<a href = "#">Link</a>
+			<a href = "#">Link</a>
+			<a href = "#">Link</a>
+		</nav>
+	</header>
+	<main>
+		<section id = "assuntos">
+			<article = >
+				<h2>Notícias sobre a minha vida</h2>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae doloremque quo tempore eum aliquam, facere eos labore placeat veritatis voluptate architecto, sunt, nisi ullam vitae soluta adipisci quasi possimus laborum.</p>
+				<aside> 
+					<p>Artigo escrito por eu mesma</p>
+				</aside>
+			</article>
+		</section>
+	</main>
+	<footer>Desenvolvida por eu mesma também</footer>
+	<div id="bola"></div>
+  
+</body>
+</html>
