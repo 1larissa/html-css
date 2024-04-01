@@ -36,7 +36,7 @@ body{
 }
 
 a.externo::after{
-    content: "\00A0\1F517;";
+    content: "\00A0\1F517";
 }
 
 header{
@@ -55,6 +55,7 @@ header > h1{
     font-weight: normal;
     padding-bottom: 20px;
     font-size: 3em;
+    line-height: 1.0;
 }
 
 header > p {
