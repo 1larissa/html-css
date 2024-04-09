@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabelas</title>
+</head>
+<style>
+    table{
+        width: 400px;
+        border-collapse: collapse; /* "colapsa" os  dados, ou seja, somem os espacinhos entre os dados*/
+    }
+
+    td{
+        padding: 8px;
+        border: 1px solid black;
+    }
+
+    .linha{
+        background-color: lightgray;
+    }
+
+    .dado{
+        background-color: yellow;
+    }
+</style>
+<body>
+    <h1>Minha primeira tabela</h1>
+    <!--
+        Hierarquia de tabelas (simples)
+
+        TABLE = tabela
+            TABLE ROWS = linhas da tabela
+                TABLE HEADER = cabeçalho da tabela
+                TABLE DATA = dados da tabela
+    -->
+    <table>
+        <tr> <!-- Primeira linha-->
+            <td>A1</td>
+            <td>B1</td>
+            <td>C1</td>
+        </tr>
+        <tr class="linha"> <!-- Segunda linha-->
+            <td>A2</td>
+            <td>B2</td>
+            <td>C2</td>
+        </tr>
+        <tr> <!-- Terceira linha-->
+            <td>A3</td>
+            <td>B3</td>
+            <td>C3</td>
+        </tr>
+        <tr> <!-- Quarta linha-->
+            <td>A4</td>
+            <td class="dado">B4</td>
+            <td>C4</td>
+        </tr>
+        <tr> <!-- Quinta linha-->
+            <td>A5</td>
+            <td>B5</td>
+        </tr>
+        <tr> <!-- Sexta linha-->
+            <td>A6</td>
+        </tr>
+    </table>
+    
+</body>
+</html>
