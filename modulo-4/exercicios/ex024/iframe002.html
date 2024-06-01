@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste com iframe</title>
+    <style>
+        iframe{
+            height: 500px;
+            width: 500px;
+            border: 5px dashed lightcyan;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Escolha uma página</h1>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto, cupiditate? Aut, modi doloribus rem quod sit
+        dicta voluptate nihil nulla quo obcaecati itaque minus unde cupiditate asperiores laboriosam ipsum quaerat?</p>
+    
+    <ul>
+        <li><a href="paginas-extras/pag001.html" target="frame">Primeira Página</a></li>
+        <li><a href="paginas-extras/pag002.html" target="frame">Segunda Página</a></li>
+        <li><a href="paginas-extras/pag003.html" target="framw">Terceira Página</a></li>
+    </ul>
+    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi quae repellendus, vel sit eius, porro, quod ipsa
+        nesciunt molestiae necessitatibus mollitia totam quo doloremque odit est corrupti? Hic, nulla esse.</p>
+
+    <iframe srcdoc="<h1> Escolha uma das opções acima</h1><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates veniam molestiae iste commodi! Non maxime tempore neque amet eum reprehenderit optio qui inventore aliquam perferendis enim praesentium, voluptatum quae explicabo?</p><img src='evelynn.jpg'>"
+        name="frame" frameborder="0">
+        [Seu navegador não suporta iframes] 
+    </iframe>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odio excepturi quas iure sunt minima, dignissimos nobis
+        tenetur doloribus nesciunt optio et temporibus voluptas molestias ducimus, provident neque? Sint, non similique!
+    </p>
+</body>
+
+</html>
