@@ -3,9 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio Redes</title>
+    <title>Desafio Redes Sociais</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body{
+            background-image: url(imagens/fundo-borboleta.jpg);
+            background-color: burlywood;
+            background-position: center;
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        #smartphone{
+            width: 336px;
+            height: 581px;
+            background-image: url(imagens/frame-galaxy.png);
+            position: absolute;
+            background-size: 100% 100%; 
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+        #tela{
+            width: 260px;
+            height: 349px;
+            position: absolute;
+            background-size: 100% 100%; 
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+        }
+        a{
+            font-weight: bolder;
+            text-decoration: none;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        a:visited{
+            color:deeppink;
+        }
+        #footer{
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            background-color: rgb(244, 154, 178);
+            color: black;
+            text-align: center;
+            position: absolute;
+            padding: 10px;   
+            bottom:0%;     
+        }
+
+    </style>
 </head>
 <body>
-    
+    <a href="paginas-extras/home.html" target="frame">Teste</a>
+
+    <div id="smartphone"></div>
+    <div>        
+        <iframe id="tela" name="frame" src="" frameborder="0"></iframe>
+    </div>
+    <div id="footer"> 
+        Feito por <a href="https://github.com/1larissa" target="_blank">Larissa Rodrigues</a> baseado no <a href="https://professorguanabara.github.io/projeto-social/">Projeto Redes Sociais</a> do <a href="https://www.cursoemvideo.com" target="_blank">Curso em Vídeo</a>
+    </div>
+
+  
 </body>
 </html>
