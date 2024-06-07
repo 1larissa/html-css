@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+::-webkit-scrollbar{
+    width: 0;
+    height: 0;
+}
+img{
+    width: 100vw;
+}
+a{
+    display: block;
+    background-color: pink;
+    padding: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+}
+a:hover{
+    background-color: deeppink;
+}
