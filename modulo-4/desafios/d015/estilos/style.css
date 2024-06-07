@@ -72,8 +72,20 @@ section#redes_sociais img:hover{
     transition: transform .3s, border 1s;
 }
 
+a{
+    font-weight: bolder;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration:underline;
+}
+a:visited{
+    color:deeppink;
+}
+
 footer{
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size:medium;
     background-color: rgb(244, 154, 178);
     color: black;
     text-align: center;
