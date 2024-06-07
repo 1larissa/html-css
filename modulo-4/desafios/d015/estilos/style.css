@@ -23,6 +23,13 @@ body{
 main{
     position: relative;
     height: 100vh;
+    font-size: small;
+    text-align: center;
+    color: deeppink;
+}
+
+h1{
+    padding: 50px;
 }
 
 section#smartphone{
@@ -63,4 +70,14 @@ section#redes_sociais img:hover{
     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.317);
     transition:transform .5s ;
     transition: transform .3s, border 1s;
+}
+
+footer{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(244, 154, 178);
+    color: black;
+    text-align: center;
+    position: absolute;
+    padding: 10px;   
+    bottom:0%;     
 }
