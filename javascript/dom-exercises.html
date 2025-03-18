@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DOM Exercises</title>
+  </head>
+  <body>
+    <button>9a</button>
+    <button class="js-button">9b</button>
+
+    <br />
+
+    <button onclick="showAnswer('heads')">heads</button>
+    <button onclick="showAnswer('tails')">tails</button>
+    <p class="js-answer"></p>
+
+    <input class="js-name-input" type="text" onkeydown="handleKeydown(event.key)" />
+    <button class="js-button-submit" onclick="submit()">Submit</button>
+    <p class="js-answer-9d"></p>
+    <br><br>
+    <p>-----------------------------------------</p>
+    <button onclick="playGame('heads')">heads</button>
+<button onclick="playGame('tails')">tails</button>
+
+    <script>
+      let buttonElement = document.querySelector("button");
+      console.log(buttonElement);
+      document.querySelector(".js-button").innerHTML = "9b changed";
+
+      function showAnswer(answer) {
+        document.querySelector(".js-answer").innerHTML = `You chose: ${answer}`;
+      }
+
+      function submit() {
+        let name = document.querySelector(".js-name-input").value;
+        document.querySelector(
+          ".js-answer-9d"
+        ).innerHTML = `Your name is: ${name}`;
+      }
+
+      function handleKeydown(key) {
+        console.log(key);
+        if (key === 'Enter'){
+            submit();
+        }
+      }
+
+      
+    const randomNumber = Math.random();
+
+const result = randomNumber < 0.5 ? "heads" : "tails";
+console.log(`The computer picked: ${result}`);
+
+let score = JSON.parse(localStorage.getItem('score'));
+
+if (score === null) {
+    score = {
+    wins: 0,
+    losses: 0,
+    };
+}
+
+function playGame(guess) {
+    let message = guess === result ? "You win!" : "You lose!";
+    if (message === "You win!") {
+    score.wins++;
+    } else if (message === "You lose!") {
+    score.losses++;
+    }
+    localStorage.setItem("score", JSON.stringify(score));
+    printScore();
+}
+
+function printScore() {
+    alert(`Wins: ${score.wins}, Losses: ${score.losses}`);
+}
+      
+    </script>
+  </body>
+</html>

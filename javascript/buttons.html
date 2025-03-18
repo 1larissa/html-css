@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Buttons</title>
+    <style>
+      .amazon-button {
+        background-color: rgb(255, 216, 20);
+        color: black;
+        font-size: 20px;
+        padding: 7px 50px;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+      }
+
+      .uber-request-button {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 13px;
+        cursor: pointer;
+      }
+
+      .uber-schedule-button {
+        background-color: rgb(230, 230, 230);
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 13px;
+        cursor: pointer;
+      }
+
+      .top-button {
+        background-color: rgb(230, 230, 230);
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 13px;
+        cursor: pointer;
+      }
+
+      .is-toggled {
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 3px;
+        padding: 10px 13px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="amazon-button">Add to Cart</button>
+    <button class="uber-request-button">Request now</button>
+    <button class="uber-schedule-button">Schedule for later</button>
+    <button class="js-button">Test</button>
+    <br /><br />
+    <button
+      class="top-button js-gaming-button"
+      onclick="toggleButton('.js-gaming-button')"
+    >
+      Gaming
+    </button>
+    <button
+      class="top-button js-music-button"
+      onclick="toggleButton('.js-music-button')"
+    >
+      Music
+    </button>
+    <button
+      class="top-button js-tech-button"
+      onclick="toggleButton('.js-tech-button')"
+    >
+      Tech
+    </button>
+    <script>
+      function turnOffPreviousButton() {
+        let previousButton = document.querySelector(".is-toggled");
+        if (previousButton) {
+          previousButton.classList.remove("is-toggled");
+        }
+      }
+      function toggleButton(selector) {
+        let buttonToggled = document.querySelector(selector);
+        console.log(buttonToggled);
+        turnOffPreviousButton();
+        if (!buttonToggled.classList.contains("is-toggled")) {
+          buttonToggled.classList.add("is-toggled");
+        } else {
+          buttonToggled.classList.remove("is-toggled");
+        }
+      }
+    </script>
+  </body>
+</html>

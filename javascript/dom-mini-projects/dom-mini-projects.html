@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM</title>
+    <link rel="stylesheet" href="./css/dom-mini-projects.css" />
+  </head>
+  <body>
+    <h3>DOM Mini Projects</h3>
+
+    <br />
+
+    <p>Youtube Subscribe Button</p>
+    <button class="js-subscribe-button subscribe-button" onclick="subscribe()">
+      Subscribe
+    </button>
+
+    <p>---------------------------------------------------------</p>
+
+    <p>Rock Paper Scissors</p>
+    <a href="./rock-paper-scissors-com-JSON.html">Click here</a>
+
+    <p>---------------------------------------------------------</p>
+
+    <p>Amazon Shipping Calculator</p>
+    <p>Orders under $40 = +$10 shipping.</p>
+    <p>Orders over $40 = FREE shipping.</p>
+    <input
+      placeholder="Cost of order"
+      class="js-cost-input cost-input"
+      onkeydown="handleCostKeyDown(event)"
+    />
+
+    <button class="calculate-button" type="submit" onclick="calculateTotal()">
+      Calculate
+    </button>
+    <p class="js-total"></p>
+
+    <p>---------------------------------------------------------</p>
+
+    <p>Atualização automática do input</p>
+    <input class="js-input" onkeyup="atualizaInput(event)" type="text" />
+    <p class="js-p"></p>
+
+    <script src="./scripts/dom-mini-projects.js"></script>
+  </body>
+</html>
