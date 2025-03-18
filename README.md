@@ -1,12 +1,12 @@
-# Curso de HTML, CSS e Javascript 🌐
+# HTML, CSS and Javascript Content 🌐
 
-Repositório para exercícios realizados durante os módulos do Curso de de HTML e CSS do Curso em Vídeo (até o módulo 4), do HTML & CSS Full Course do SuperSimpleDev (módulo 5) e do JavaScript Tutorial Full Course - Beginner to Pro do SuperSimpleDev
+Repositório para armazenar conteúdos e projetos aprendidos / realizados ao estudar HTML, CSS e Javascript.
 
-#### Javascript Mini Projects
+### Javascript Mini Projects
 
-#### Javascript Projects
+### Javascript  Projects
 
-#### HTML/CSS Projects
+### HTML/CSS Projects
 <a href="https://1larissa.github.io/html-css/html-css/modulo-4/desafios/d015/index.html">Projeto Redes Sociais</a>
 
 <a href="https://1larissa.github.io/html-css/html-css/modulo-2/desafios/d010/index.html">Projeto Android</a>
