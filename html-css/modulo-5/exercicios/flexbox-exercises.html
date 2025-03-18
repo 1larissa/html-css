@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flexbox exercises</title>
+    <style>
+      * {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      /*-------- EXERCÍCIO 12E -----------*/
+
+      .container {
+        border: 1px solid gray;
+        border-radius: 6px;
+        margin-top: 30px;
+        width: 300px;
+      }
+
+      .flexbox {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 6px 12px;
+      }
+
+      .notifications {
+        background-color: rgb(49, 109, 245);
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 15px;
+        padding: 3px 10px;
+        font-size: 14px;
+      }
+
+      /*-------- EXERCÍCIO 12F -----------*/
+
+      .header {
+        display: flex;
+        flex-direction: row;
+        background-color:rgb(118, 79, 194);
+        margin-top: 30px;
+        /* height: 50px; */
+        justify-content: space-between;
+        align-items:center;
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+
+      .home-link {
+        font-weight: bold;
+        color: white;
+      }
+
+      .text-box {
+        width: 500px;
+        border: none;
+        border-radius: 15px;
+        margin-top: 12px;
+        margin-bottom: 12px;
+        height: 30px;
+        padding-left: 20px;
+      }
+
+      button {
+        background-color: transparent;
+        border: 1px solid white;
+        color: white;
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      /*-------- EXERCÍCIO 12G -----------*/
+      .grid {
+        display: grid;
+        width: 300px;
+        grid-template-columns: 50px 1fr 85px;
+        border: 1px solid gray;
+        margin-top: 30px;
+        border-radius: 6px;
+        padding: 20px 10px;
+        align-items: center;
+      }
+
+      .flexbox2 {
+        flex-direction: row;
+        align-items: center;
+        margin: 5px 10px;
+        margin-bottom: 10px;
+      }
+
+      img {
+        width: 100%;
+        border-radius: 50%;
+      }
+
+      .name {
+        font-weight: bold;
+      }
+
+      .profile-info {
+        color: gray;
+        font-size: 14px;
+      }
+
+      .follow-button {
+        background-color: rgb(49, 109, 245);
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 3px 10px;
+        font-size: 14px;
+        font-weight: bold;
+        cursor: pointer;
+        padding: 10px 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex">
+      <div style="background-color: lightblue; width: 200px">200px</div>
+      <div style="background-color: lightpink; width: 75px">75px</div>
+    </div>
+
+    <div style="display: flex; margin-top: 20px">
+      <div style="background-color: lightblue; width: 50px">items 1</div>
+      <div style="background-color: lightpink; flex: 1">item 2</div>
+      <div style="background-color: lightblue; width: 75px">item 3</div>
+    </div>
+
+    <div
+      style="
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+        border: 1px solid gray;
+      "
+    >
+      <div style="background-color: lightblue; width: 50px">items 1</div>
+      <div style="background-color: lightpink; width: 50px">item 2</div>
+      <div style="background-color: lightblue; width: 50px">item 3</div>
+      <div style="background-color: lightpink; width: 50px">item 4</div>
+    </div>
+
+    <!-- ------------ 12e ------------------ -->
+
+    <div class="container">
+      <div class="flexbox">
+        <div>Home</div>
+        <div class="notifications">14</div>
+      </div>
+      <div class="flexbox">
+        <div>Notifications</div>
+        <div class="notifications">3</div>
+      </div>
+      <div class="flexbox">
+        <div>Messages</div>
+        <div class="notifications">5</div>
+      </div>
+    </div>
+
+    <!-- ----------- 12f -------------- -->
+    <div class="header">
+        <div class="home-link">Home</div>
+        <input class="text-box" type="text" placeholder="Search">
+        <button>Download</button>
+    </div>
+    <!-- ------------12g-------------- -->
+
+    <div class="grid">
+      <div>
+        <img src="imagens/cat1.png" alt="" />
+      </div>
+      <div class="flexbox2">
+        <div class="name">Oliver</div>
+        <div class="profile-info">the cat</div>
+        <div class="profile-info">Popular</div>
+      </div>
+      <div>
+        <button class="follow-button">Follow</button>
+      </div>
+      <div>
+        <img src="imagens/what-da-dog-meme-10.jpg" alt="" />
+      </div>
+      <div class="flexbox2">
+        <div class="name">Rex</div>
+        <div class="profile-info">happy bulldog</div>
+        <div class="profile-info">Popular</div>
+      </div>
+      <div>
+        <button class="follow-button">Follow</button>
+      </div>
+      <div>
+        <img src="imagens/74f4f548392fbdafbe8a5d9764c83eaf.jpg" alt="" />
+      </div>
+      <div class="flexbox2">
+        <div class="name">Mimi</div>
+        <div class="profile-info">Spleepy cat</div>
+        <div class="profile-info">Popular</div>
+      </div>
+      <div>
+        <button class="follow-button">Follow</button>
+      </div>
+    </div>
+  </body>
+</html>
