@@ -4,10 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Position Exercises</title>
-    <style></style>
+    <style>
+
+    .close-button {
+        background-color: black;
+        position:absolute;
+        /* right: 10px; ajustar conforme exercicio */
+        left: -10px;
+        top: -10px;
+        color: white;
+        padding: 6px 9px;
+        border-radius: 50%;
+        font-family: Arial, Helvetica, sans-serif;
+    }        
+
+    .div15b {
+        position: fixed;
+        width: 320px;
+        background-color: gray;
+        height: 180px;
+        bottom: 20px;
+        right: 20px;
+    }
+
+    .video-time {
+        position: absolute;
+        bottom: 8px;
+        right: 8px;
+        background-color: rgba(0, 0, 0, 0.863);
+        color: white;
+        padding: 3px 5px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .div15e {
+        position: relative;
+        width: 200px;
+        height: 300px;
+        background-color: rgb(182, 182, 182);
+    }
+
+    .div15e img {
+        width: 100%;
+        object-fit: contain;
+    }
+
+    .discount-label {
+        background-color: black;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+
+        position: absolute;
+        top: 10px;
+        right: 0px;
+    }
+
+    .discount-label:hover {
+        transform: scale(1.3);
+        background-color: red;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: bold;
+
+        position: absolute;
+        top: 10px;
+        right: 0px;
+
+    }
+
+    .product-overlay {
+        background-color: rgba(255, 255, 255, 0.753);
+
+        position: absolute;
+        right: 0px;
+        left: 0px;
+        bottom: 0px;
+        height: 100px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+    }
+
+    .product-overlay button {
+        border: 1px solid black;
+        background-color: rgb(190, 189, 189);
+        color: black;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 14px;
+        padding: 10px 12px;
+    }
+
+    </style>
   </head>
   <body>
-    <!-- 15a -->
-    <div class="close-button">X</div>
-  </body>
+    <!-- 15a
+    <div class="close-button">X</div> -->
+
+    <!-- 15b -->
+     <!-- <div class="div15b"></div> -->
+
+     <!-- 15c e 15d -->
+     <!-- <div class="div15b">
+        <div class="close-button">X</div>
+        <div class="video-time">0:29</div>
+     </div> -->
+     
+     <!-- 15e -->
+      <div class="div15e">
+        <img src="imagens/green-dress.png" alt="">
+        <div class="discount-label">20% OFF</div>
+        <div class="product-overlay">
+            <button>Add to Cart</button>
+        </div>
+      </div>
+    </body>
 </html>
