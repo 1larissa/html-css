@@ -11,7 +11,7 @@ Repositório para armazenar conteúdos e projetos aprendidos / realizados ao est
 
 <a href="https://1larissa.github.io/html-css/html-css/modulo-2/desafios/d010/index.html">Projeto Android</a>
 
-<a href="https://1larissa.github.io/html-css/html-css/modulo-3/desafios/d012/">Projeto Cordel</a>
+<a href="https://1larissa.github.io/html-css-javascript/html-css/modulo-3/desafios/d012">Projeto Cordel</a>
 
 
 
