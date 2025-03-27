@@ -57,7 +57,6 @@
 }
 
 .search-bar::placeholder {
-  font-family: Roboto, Arial;
   font-size: 16px;
 }
 
@@ -86,7 +85,6 @@
 .upload-icon-container .tooltip,
 .youtube-apps-icon-container .tooltip,
 .notifications-icon-container .tooltip {
-  font-family: Roboto, Arial;
   position: absolute;
   background-color: gray;
   color: white;
@@ -155,7 +153,6 @@
   right: -5px;
   background-color: rgb(200, 0, 0);     
   color: white;
-  font-family: Roboto, Arial;
   font-size: 11px;
   padding: 2px 5px;
   border-radius: 50%;

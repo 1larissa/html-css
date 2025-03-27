@@ -34,6 +34,9 @@
   box-shadow: 1px 1px 7px 0px #00000070;
   opacity: 0;
   z-index: 2;
+  pointer-events: none; 
+  white-space: nowrap;
+  transition: opacity 0.15s;
 }
 
 .channel-tooltip img {
@@ -74,7 +77,6 @@
   bottom: 8px;
   right: 5px;
   background-color: rgba(0, 0, 0, 0.767);
-  font-family: Roboto, Arial;
   font-size: 12px;
   font-weight: bold;
   color: white;
@@ -97,4 +99,22 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 16px;
   row-gap: 40px;
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999px){
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
 }
