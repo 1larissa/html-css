@@ -1,0 +1,103 @@
+* {
+    margin: 0px;
+}
+
+@font-face {
+    font-family: Cute Love;
+    src: url("cute_love_font/Cute\ Love.ttf");
+}
+
+body{
+    font-family: Cute Love, Arial, Helvetica, sans-serif;
+    background-color: lightpink;
+} 
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    color: rgb(90, 90, 90);
+    -webkit-text-stroke: 2px white; 
+
+    position: relative;
+
+    margin-top: 25px;
+
+}
+
+.container-cloud-top {
+    width: 500px;
+    position: fixed;
+    left: -230px;
+    top: -25px;
+    transform: rotate(306deg);
+}
+
+.container-cloud-top img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.grid-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    margin: 50px;
+}
+
+.todo-grid,
+.todo-input-grid {
+    display: grid;
+    grid-template-columns: 200px 150px 100px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+
+}
+
+.todo-input-grid {
+    margin-bottom: 10px;
+    align-items: stretch;
+}
+
+.name-input,
+.due-date-input {
+    font-size: 15px;
+    padding: 6px;
+    border: none;
+    border-radius: 20px;
+}
+
+.add-todo-button {
+    background-color: green;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.delete-todo-button {
+    background-color: darkred;
+    color: white;
+    border: none;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 10px;
+}
+
+.container-cloud-bottom {
+    width: 500px;
+
+    position: fixed;
+    right: -225px;
+    bottom: -50px;
+    transform: rotate(123deg);
+}
+
+.container-cloud-bottom img {
+    width: 100%;
+    object-fit: contain;
+}

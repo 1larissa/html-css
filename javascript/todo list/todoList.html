@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Todo List</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=delete" />/
+    <link rel="stylesheet" href="./todoList.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container-cloud-top">
+        <img src="images/cloud.png" alt="cloud-image" />
+      </div>
+      <div>
+        <p>Todo list</p>
+      </div>
+    </header>
+
+    <main>
+      <div class="grid-container">
+        <div class="todo-input-grid">
+          <input
+            class="js-name-input name-input"
+            type="text"
+            placeholder="Todo name"
+          />
+  
+          <input type="date" class="js-due-date-input due-date-input" />
+  
+          <button class="js-add-button add-todo-button" onclick="addTodo()">
+            Add
+          </button>
+        </div>
+  
+        <div class="js-todo-list todo-grid"></div>
+      </div>
+    </main>
+
+    <div class="container-cloud-bottom">
+      <img src="images/cloud.png" alt="cloud-image" />
+    </div>
+
+    <script src="./todoList.js"></script>
+  </body>
+</html>
