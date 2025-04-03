@@ -5,7 +5,7 @@ Repositório para armazenar conteúdos e projetos aprendidos / realizados ao est
 
 ### Javascript Mini Projects
 
-✅ <a href="https://1larissa.github.io/html-css-javascript/javascript/todo-list/todoList.html">To do List (Currently working on...) </a>
+✅ <a href="https://1larissa.github.io/html-css-javascript/javascript/todo-list/todoList.html">Responsive Todo List (Currently working on...) </a>
 
 🔢 <a href="https://1larissa.github.io/html-css-javascript/javascript/calculator/calculator.html">JS Simple Calculator</a>
 
