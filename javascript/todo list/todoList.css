@@ -10,7 +10,7 @@
 body{
     font-family: Cute Love, Arial, Helvetica, sans-serif;
     background-color: lightpink;
-    color: rgb(141, 140, 140);
+    color: rgb(94, 93, 93);
 } 
 
 header {
@@ -74,13 +74,39 @@ input:checked + label{
     text-decoration:line-through;
 }
 
+
+
 .add-todo-button {
     font-family: Cute Love;
-    background-color: rgb(255, 255, 255);
-    color: rgb(250, 118, 138);
+    background-color: rgb(247, 88, 111);
+    color: white;
     border: none;
+    border-radius: 6px;
     font-size: 15px;
     cursor: pointer;
+
+    position:relative;
+
+}
+
+/* coracao rodando */
+/* .add-todo-button img{ 
+    width: 100%;
+    max-height: 70px;
+    object-fit: contain;
+    position: absolute;
+    top: -30px;
+    left: 0;
+} */
+
+/* coracao pulsando */
+/* TEM Q TROCAR A IMAGEM */
+.add-todo-button img{ 
+    width: 50px;
+    max-height: 50px;
+    position: absolute;
+    top: -30px;
+    right: -10px;
 }
 
 .delete-todo-button {
