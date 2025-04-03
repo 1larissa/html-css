@@ -9,7 +9,7 @@ Repositório para armazenar conteúdos e projetos aprendidos / realizados ao est
 
 ✋ <a href="https://1larissa.github.io/html-css-javascript/javascript/dom-mini-projects/rock-paper-scissors-com-JSON.html">Rock, Paper, Scissors Mini Game</a>
 
-✅ <a href="https://1larissa.github.io/html-css-javascript/javascript/todo%20list%20-%20refazer/todoList.html">To do List (Working on..) </a>
+✅ <a href="https://1larissa.github.io/html-css-javascript/javascript/todo-list/todoList.html">To do List (Working on..) </a>
 
 ### HTML/CSS Projects
 🎬 <a href="https://1larissa.github.io/html-css-javascript/html-css/modulo-5/Youtube-Page-Clone/youtube.html">Youtube Responsive Page Clone</a>
