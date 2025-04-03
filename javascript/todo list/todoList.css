@@ -9,7 +9,7 @@
 
 body{
     font-family: Cute Love, Arial, Helvetica, sans-serif;
-    background-color: lightpink;
+    background-color: #EFCAC3;
     color: rgb(94, 93, 93);
 } 
 
@@ -51,7 +51,7 @@ header {
 .todo-grid,
 .todo-input-grid {
     display: grid;
-    grid-template-columns: 300px 80px 100px;
+    grid-template-columns: 300px 120px 100px;
     column-gap: 10px;
     row-gap: 10px;
     align-items: center;
@@ -62,12 +62,19 @@ header {
     align-items: stretch;
 }
 
+
+
 .name-input,
 .due-date-input {
     font-size: 15px;
+    color: gray;
     padding: 6px;
     border: none;
     border-radius: 20px;
+}
+
+.name-input {
+    padding-left: 15px;
 }
 
 input:checked + label{
