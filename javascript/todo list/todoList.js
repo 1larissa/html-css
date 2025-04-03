@@ -2,7 +2,7 @@ const todoList = JSON.parse(localStorage.getItem("todoList")) || [
   {
     name: "Put your todo list above ☝️",
     dueDate: "",
-    done: false
+    done: false,
   },
   {
     name: "Do it and check them ✔️",
@@ -69,13 +69,6 @@ const todoList = JSON.parse(localStorage.getItem("todoList")) || [
 
 //     localStorage.setItem('todoList', JSON.stringify(object));
 // }
-
-function initializeTodoList() {
-  let todoListHTML = "";
-
-
-}
-
 renderTodoList();
 
 function renderTodoList() {
@@ -87,7 +80,7 @@ function renderTodoList() {
 
     <div>
       <input type="checkbox" id="${name}" name="${name}" value="${name}"
-       ${done === true ? 'checked' : ''}
+       ${done === true ? "checked" : ""}
       >
       <label for="${name}">${name}</label>
     </div>
@@ -111,23 +104,36 @@ function renderTodoList() {
     });
 }
 
-document.querySelector(".js-add-todo-button").addEventListener("click", () => {
+document.querySelector(".js-add-button").addEventListener("click", () => {
   addTodo();
 });
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === 'Enter') {
+    addTodo();
+  }
+})
 
 function addTodo() {
   const inputElement = document.querySelector(".js-name-input");
   const name = inputElement.value;
+  console.log(name);
+
+  if (name === "") {
+    alert("Todo name is required!");
+    return;
+  }
 
   const dateInputElement = document.querySelector(".js-due-date-input");
   const dueDate = dateInputElement.value;
+  console.log(dueDate);
 
   todoList.push({
-    name,
-    dueDate,
     // é a mesma coisa que
     //name: name,
     //dueDate: dueDate,
+    name,
+    dueDate,
   });
 
   inputElement.value = "";

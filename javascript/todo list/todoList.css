@@ -70,11 +70,11 @@ header {
     color: gray;
     padding: 6px;
     border: none;
-    border-radius: 20px;
+    border-radius: 6px;
 }
 
 .name-input {
-    padding-left: 15px;
+    padding-left: 10px;
 }
 
 input:checked + label{
