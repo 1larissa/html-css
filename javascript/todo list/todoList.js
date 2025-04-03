@@ -1,11 +1,20 @@
-// const todoList = JSON.parse(localStorage.getItem('todoList')) || [{
-//     name: 'make lunch',
-//     dueDate: '2022-03-12'
-// },
-// {
-//     name: 'make janta',
-//     dueDate: '2022-03-12'
-// }];
+const todoList = JSON.parse(localStorage.getItem("todoList")) || [
+  {
+    name: "Put your todo list above ☝️",
+    dueDate: "",
+    done: false
+  },
+  {
+    name: "Do it and check them ✔️",
+    dueDate: "",
+    done: false,
+  },
+  {
+    name: "YOU RULE IT!! 🏆",
+    dueDate: "",
+    done: true,
+  },
+];
 
 // renderList();
 
@@ -61,36 +70,31 @@
 //     localStorage.setItem('todoList', JSON.stringify(object));
 // }
 
-const todoList = [
-  {
-    name: "Put your todo list above ☝️",
-    dueDate: "2022-12-22",
-  },
-  {
-    name: "Do it and check them ✔️",
-    dueDate: "2022-12-22",
-  },
-  {
-    name: "YOU RULE IT!! 🏆",
-    dueDate: "2022-12-22",
-  },
-];
+function initializeTodoList() {
+  let todoListHTML = "";
+
+
+}
 
 renderTodoList();
 
 function renderTodoList() {
   let todoListHTML = "";
 
-  todoList.forEach((todoObject, index) => {
-    const { name, dueDate } = todoObject;
+  todoList.forEach((todoObject) => {
+    const { name, dueDate, done } = todoObject;
     const html = `
-        <div>${name}</div>
-        <div>${dueDate}</div>
-        <button class="delete-todo-button js-delete-todo-button">
-          <span class="material-symbols-outlined">
-          delete
-          </span>
-        </button> 
+
+    <div>
+      <input type="checkbox" id="${name}" name="${name}" value="${name}"
+       ${done === true ? 'checked' : ''}
+      >
+      <label for="${name}">${name}</label>
+    </div>
+    <div>${dueDate}</div>
+    <button class="delete-todo-button js-delete-todo-button">
+        <img src="./images/delete.png" alt="delete">
+    </button> 
       `;
     todoListHTML += html;
   });
