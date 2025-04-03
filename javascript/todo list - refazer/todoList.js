@@ -63,11 +63,15 @@
 
 const todoList = [
   {
-    name: "make dinner",
+    name: "Put your todo list above ☝️",
     dueDate: "2022-12-22",
   },
   {
-    name: "wash dishes",
+    name: "Do it and check them ✔️",
+    dueDate: "2022-12-22",
+  },
+  {
+    name: "YOU RULE IT!! 🏆",
     dueDate: "2022-12-22",
   },
 ];
@@ -115,10 +119,11 @@ function addTodo() {
   const dueDate = dateInputElement.value;
 
   todoList.push({
-    //name: name,
-    //dueDate: dueDate,
     name,
     dueDate,
+    // é a mesma coisa que
+    //name: name,
+    //dueDate: dueDate,
   });
 
   inputElement.value = "";
