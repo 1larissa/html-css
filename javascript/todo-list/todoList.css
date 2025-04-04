@@ -1,99 +1,93 @@
 * {
-    margin: 0px;
+  margin: 0px;
 }
 
 @font-face {
-    font-family: Cute Love;
-    src: url("cute_love_font/Cute\ Love.ttf");
+  font-family: Cute Love;
+  src: url("cute_love_font/Cute\ Love.ttf");
 }
 
-body{
-    font-family: Cute Love, Arial, Helvetica, sans-serif;
-    background-color: #EFCAC3;
-    color: rgb(94, 93, 93);
-} 
+body {
+  font-family: Cute Love, Arial, Helvetica, sans-serif;
+  background-color: #efcac3;
+  color: rgb(94, 93, 93);
+}
 
 header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 80px;
-    -webkit-text-stroke: 2px white; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 80px;
+  -webkit-text-stroke: 2px white;
 
-    position: relative;
+  position: relative;
 
-    margin-top: 25px;
-
+  margin-top: 25px;
 }
 
 .container-cloud-top {
-    width: 500px;
-    position: fixed;
-    left: -230px;
-    top: -25px;
-    transform: rotate(306deg);
+  width: 500px;
+  position: fixed;
+  left: -230px;
+  top: -25px;
+  transform: rotate(306deg);
 }
 
 .container-cloud-top img {
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
 
 .grid-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    margin: 50px;
+  margin: 50px;
 }
 
 .todo-grid,
 .todo-input-grid {
-    display: grid;
-    grid-template-columns: 300px 120px 100px;
-    column-gap: 10px;
-    row-gap: 10px;
-    align-items: center;
+  display: grid;
+  grid-template-columns: 300px 120px 100px;
+  column-gap: 10px;
+  row-gap: 10px;
+  align-items: center;
 }
 
 .todo-input-grid {
-    margin-bottom: 10px;
-    align-items: stretch;
+  margin-bottom: 10px;
+  align-items: stretch;
 }
-
-
 
 .name-input,
 .due-date-input {
-    font-size: 15px;
-    color: gray;
-    padding: 6px;
-    border: none;
-    border-radius: 6px;
+  font-size: 15px;
+  color: gray;
+  padding: 6px;
+  border: none;
+  border-radius: 6px;
 }
 
 .name-input {
-    padding-left: 10px;
+  padding-left: 10px;
 }
 
-input:checked + label{
-    text-decoration:line-through;
+input:checked + label {
+  text-decoration: line-through;
 }
-
-
 
 .add-todo-button {
-    font-family: Cute Love;
-    background-color: rgb(247, 88, 111);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 15px;
-    cursor: pointer;
+  font-family: Cute Love;
+  background-color: rgb(247, 88, 111);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
 
-    position:relative;
-
+  position: relative;
 }
 
 /* coracao rodando */
@@ -108,83 +102,111 @@ input:checked + label{
 
 /* coracao pulsando */
 /* TEM Q TROCAR A IMAGEM */
-.add-todo-button img{ 
-    width: 50px;
-    max-height: 50px;
-    position: absolute;
-    top: -30px;
-    right: -10px;
+.add-todo-button img {
+  width: 40px;
+  max-height: 50px;
+  position: absolute;
+  top: -9px;
+  right: 0px;
 }
 
 .delete-todo-button {
-    height: 38px;
-    background-color: rgb(141, 140, 140);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-size: 15px;
-    cursor: pointer;
-    padding: 10px 10px;
+  height: 38px;
+  background-color: rgb(141, 140, 140);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 10px;
 }
 
-.delete-todo-button img{
-    width: 100%;
-    max-height: 100%; /* Garante que a altura não exceda a do pai (sem padding) */
-    object-fit: contain;
+.delete-todo-button img {
+  width: 100%;
+  max-height: 100%; /* Garante que a altura não exceda a do pai (sem padding) */
+  object-fit: contain;
 }
 
 footer {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
 
-    display: flex;
-    flex-direction: row;
-    align-items:first baseline;
-    justify-content: center ;
+  display: flex;
+  flex-direction: row;
+  align-items: first baseline;
+  justify-content: center;
 
-    background-color: rgb(247, 88, 111);
-    color: white;
+  background-color: rgb(247, 88, 111);
+  color: white;
 }
 
-footer a{
-    color: rgb(255, 255, 255);
+footer a {
+  color: rgb(255, 255, 255);
 }
 .container-cloud-bottom {
-    width: 500px;
+  width: 500px;
 
-    position: fixed;
-    right: -225px;
-    bottom: -50px;
-    transform: rotate(123deg);
+  position: fixed;
+  right: -225px;
+  bottom: -50px;
+  transform: rotate(123deg);
 }
 
 .container-cloud-bottom img {
-    width: 100%;
-    object-fit: contain;
+  width: 100%;
+  object-fit: contain;
 }
 
 /* MEDIAQUERIES - RESPONSIVITY */
 @media (max-width: 780px) {
-    .container-cloud-top {
-        width: 300px;
-        position: fixed;
-        left: -150px;
-        top: -17px;
-        transform: rotate(306deg);
-    }
+  .container-cloud-top {
+    width: 300px;
+    position: fixed;
+    left: -150px;
+    top: -17px;
+    transform: rotate(306deg);
+  }
 
-    header {
-        font-size: 60px;
-    }
+  header {
+    font-size: 60px;
+  }
 
-    .container-cloud-bottom {
-        width: 300px;
-    
-        position: fixed;
-        right: -150px;
-        bottom: -17px;
-        transform: rotate(123deg);
-    }
+  .container-cloud-bottom {
+    width: 300px;
+
+    position: fixed;
+    right: -150px;
+    bottom: -17px;
+    transform: rotate(123deg);
+  }
+}
+
+@media (min-width: 1000.02px) {
+  header {
+    font-size: 90px;
+  }
+
+  .todo-grid,
+  .todo-input-grid {
+    display: grid;
+    grid-template-columns: 300px 150px 130px;
+    column-gap: 10px;
+    row-gap: 10px;
+    align-items: center;
+  }
+
+  .name-input,
+  .due-date-input {
+    font-size: 18px;
+    color: gray;
+    padding: 6px;
+    border: none;
+    border-radius: 6px;
+  }
+
+  .add-todo-button {
+    height: 36px;
+  }
 }
