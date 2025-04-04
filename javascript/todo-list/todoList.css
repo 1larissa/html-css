@@ -164,3 +164,27 @@ footer a{
     width: 100%;
     object-fit: contain;
 }
+
+/* MEDIAQUERIES - RESPONSIVITY */
+@media (max-width: 780px) {
+    .container-cloud-top {
+        width: 300px;
+        position: fixed;
+        left: -150px;
+        top: -17px;
+        transform: rotate(306deg);
+    }
+
+    header {
+        font-size: 60px;
+    }
+
+    .container-cloud-bottom {
+        width: 300px;
+    
+        position: fixed;
+        right: -150px;
+        bottom: -17px;
+        transform: rotate(123deg);
+    }
+}
