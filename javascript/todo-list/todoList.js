@@ -16,6 +16,8 @@ const todoList = JSON.parse(localStorage.getItem("todoList")) || [
   },
 ];
 
+
+
 // renderList();
 
 // function addTodo() {
@@ -74,15 +76,15 @@ renderTodoList();
 function renderTodoList() {
   let todoListHTML = "";
 
-  todoList.forEach((todoObject) => {
+  todoList.forEach((todoObject, index) => {
     const { name, dueDate, done } = todoObject;
     const html = `
 
     <div>
-      <input type="checkbox" id="${name}" name="${name}" value="${name}"
+      <input type="checkbox" id="i${index}" name="${index}" value="${name}"
        ${done === true ? "checked" : ""}
       >
-      <label for="${name}">${name}</label>
+      <label for="i${index}">${name}</label>
     </div>
     <div>${dueDate}</div>
     <button class="delete-todo-button js-delete-todo-button">
@@ -109,10 +111,10 @@ document.querySelector(".js-add-button").addEventListener("click", () => {
 });
 
 window.addEventListener("keydown", (e) => {
-  if (e.key === 'Enter') {
+  if (e.key === "Enter") {
     addTodo();
   }
-})
+});
 
 function addTodo() {
   const inputElement = document.querySelector(".js-name-input");
@@ -134,9 +136,33 @@ function addTodo() {
     //dueDate: dueDate,
     name,
     dueDate,
+    done: false,
   });
 
   inputElement.value = "";
 
+  saveLocalStorage(todoList);
   renderTodoList();
+  checkboxes.forEach(checkbox => {
+    checkbox.addEventListener('change', handleCheck);
+  });
+}
+
+function saveLocalStorage(todoList) {
+  localStorage.setItem("todoList", JSON.stringify(todoList));
+}
+
+const checkboxes = document.querySelectorAll(`input[type="checkbox"]`);  
+
+checkboxes.forEach(checkbox => {
+  checkbox.addEventListener('change', handleCheck);
+});
+
+function handleCheck(){
+  // takes the i from the id
+  let index = (this.id).substring(1, this.id.length);
+  console.log(index);
+  todoList[index].done = !todoList[index].done;
+  console.log(todoList[index].done); 
+  saveLocalStorage(todoList);
 }

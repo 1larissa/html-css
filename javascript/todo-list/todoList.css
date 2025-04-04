@@ -133,6 +133,24 @@ input:checked + label{
     object-fit: contain;
 }
 
+footer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+
+    display: flex;
+    flex-direction: row;
+    align-items:first baseline;
+    justify-content: center ;
+
+    background-color: rgb(247, 88, 111);
+    color: white;
+}
+
+footer a{
+    color: rgb(255, 255, 255);
+}
 .container-cloud-bottom {
     width: 500px;
 
