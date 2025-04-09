@@ -16,8 +16,6 @@ const todoList = JSON.parse(localStorage.getItem("todoList")) || [
   },
 ];
 
-
-
 // renderList();
 
 // function addTodo() {
@@ -106,7 +104,8 @@ function renderTodoList() {
     });
 }
 
-document.querySelector(".js-add-button").addEventListener("click", () => {
+addTodo = document.querySelector(".js-add-button");
+addTodo.addEventListener("click", () => {
   addTodo();
 });
 
@@ -143,8 +142,8 @@ function addTodo() {
 
   saveLocalStorage(todoList);
   renderTodoList();
-  checkboxes.forEach(checkbox => {
-    checkbox.addEventListener('change', handleCheck);
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", handleCheck);
   });
 }
 
@@ -152,17 +151,43 @@ function saveLocalStorage(todoList) {
   localStorage.setItem("todoList", JSON.stringify(todoList));
 }
 
-const checkboxes = document.querySelectorAll(`input[type="checkbox"]`);  
+const checkboxes = document.querySelectorAll(`input[type="checkbox"]`);
 
-checkboxes.forEach(checkbox => {
-  checkbox.addEventListener('change', handleCheck);
+checkboxes.forEach((checkbox) => {
+  checkbox.addEventListener("change", handleCheck);
 });
 
-function handleCheck(){
+function handleCheck() {
   // takes the i from the id
-  let index = (this.id).substring(1, this.id.length);
+  let index = this.id.substring(1, this.id.length);
   console.log(index);
   todoList[index].done = !todoList[index].done;
-  console.log(todoList[index].done); 
+  console.log(todoList[index].done);
   saveLocalStorage(todoList);
+}
+
+colorButtons = document.querySelectorAll(".theme");
+colorButtons.forEach((button) => {
+  button.addEventListener("click", changeBackground);
+});
+
+footer = document.querySelector("footer");
+console.log(footer);
+
+function changeBackground() {
+  color = this.dataset.color;
+  document.body.style.backgroundColor = color;
+  if (color === "lightblue") {
+    addTodo.style.backgroundColor = "rgb(0, 191, 255)";
+    footer.style.backgroundColor = "rgb(0, 191, 255)";
+  } else if (color === "lightgreen") {
+    addTodo.style.backgroundColor = "rgb(0, 245, 0)";
+    footer.style.backgroundColor = "rgb(0, 245, 0)";
+  } else if (color === "rgb(233, 233, 144)") {
+    addTodo.style.backgroundColor = "rgb(207, 207, 10)";
+    footer.style.backgroundColor = "rgb(207, 207, 10)";
+  } else if (color === "rgb(228, 186, 228)") {
+    addTodo.style.backgroundColor = "rgb(199, 58, 199)";
+    footer.style.backgroundColor = "rgb(199, 58, 199)";
+  }
 }

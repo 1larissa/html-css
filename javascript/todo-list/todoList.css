@@ -11,6 +11,8 @@ body {
   font-family: Cute Love, Arial, Helvetica, sans-serif;
   background-color: #efcac3;
   color: rgb(94, 93, 93);
+
+  position: relative;  
 }
 
 header {
@@ -38,6 +40,42 @@ header {
   object-fit: contain;
 }
 
+.themes-grid-container {
+  display: grid;
+  grid-template-columns:20px 20px 20px 20px;
+  grid-auto-rows: 20px;
+  column-gap: 10px;
+
+  position: absolute;
+  top: 10px;
+  right: 50px;
+
+}
+
+.theme {
+  border: 1px solid gray;
+  border-radius: 50%;
+  background-color: gray;
+  width: 100%;
+  cursor: pointer;
+}
+
+.blue-theme {
+  background-color: lightblue;
+}
+
+.green-theme {
+  background-color: lightgreen;
+}
+
+.yellow-theme {
+  background-color: rgb(233, 233, 144);
+}
+
+.purple-theme {
+  background-color: rgb(228, 186, 228);
+}
+
 .grid-container {
   display: flex;
   flex-direction: column;
@@ -45,6 +83,7 @@ header {
   align-items: center;
 
   margin: 50px;
+  font-size: 22px;
 }
 
 .todo-grid,
@@ -84,7 +123,7 @@ input:checked + label {
   color: white;
   border: none;
   border-radius: 6px;
-  font-size: 15px;
+  font-size: 20px;
   cursor: pointer;
 
   position: relative;
@@ -128,7 +167,7 @@ input:checked + label {
 }
 
 footer {
-  position: absolute;
+  position: fixed;
   bottom: 0px;
   left: 0px;
   right: 0px;
