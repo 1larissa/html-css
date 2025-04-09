@@ -1,3 +1,20 @@
+// Get the elements
+const addTodoButton = document.querySelector(".js-add-button");
+const inputElement = document.querySelector(".js-name-input");
+const dateInputElement = document.querySelector(".js-due-date-input");
+const colorButtons = document.querySelectorAll(".theme");
+const footer = document.querySelector("footer");
+
+// Themes
+const themeColors = {
+  lightblue : 'rgb(0, 191, 255)',
+  lightgreen : 'rgb(0, 245, 0)',
+  'rgb(233, 233, 144)' : 'rgb(207, 207, 10)',
+  'rgb(228, 186, 228)' : 'rgb(199, 58, 199)'
+}
+
+// Local Storage
+
 const todoList = JSON.parse(localStorage.getItem("todoList")) || [
   {
     name: "Put your todo list above ☝️",
@@ -16,59 +33,6 @@ const todoList = JSON.parse(localStorage.getItem("todoList")) || [
   },
 ];
 
-// renderList();
-
-// function addTodo() {
-//     let inputElement = document.querySelector('.js-name-input');
-//     let name = inputElement.value;
-//     let inputDateElement = document.querySelector('.js-due-date-input');
-//     let dueDate = inputDateElement.value;
-
-//     todoList.push({
-//         // name: name,
-//         // dueDate: dueDate
-//         // ou
-//         name,
-//         dueDate
-//     });
-//     inputElement.value = '';
-
-//     renderList();
-
-// }
-// function renderList() {
-
-//     let todoListHTML = '';
-
-//     todoList.forEach((todoObject) => {
-//         console.log('for each');
-//         const { name, dueDate } = todoObject;
-//         const html = `
-//             <div>${name}</div>
-//              <div>${dueDate}</div>
-//                 <button class="delete-todo-button js-delete-todo-button">Delete</button>
-//         `;
-//         todoListHTML += html;
-//     });
-
-//     document.querySelector('.js-todo-list').innerHTML = todoListHTML;
-
-//     document.querySelector('.js-add-button').addEventListener('click', () => {
-//         addTodo();
-//     });
-
-//     document.querySelectorAll('.js-delete-todo-button').forEach((deleteButton, index) => {
-//         deleteButton.addEventListener('click', () => {
-//             todoList.splice(index, 1);
-//             renderList();
-//         });
-//     })
-// }
-
-// function saveLocalStorageTodoList(object) {
-
-//     localStorage.setItem('todoList', JSON.stringify(object));
-// }
 renderTodoList();
 
 function renderTodoList() {
@@ -102,9 +66,12 @@ function renderTodoList() {
         renderTodoList();
       });
     });
+
+    document.querySelectorAll(`input[type="checkbox"]`).forEach((checkbox) => {
+      checkbox.addEventListener("change", handleCheck);
+    });
 }
 
-addTodoButton = document.querySelector(".js-add-button");
 addTodoButton.addEventListener("click", addTodo);
 
 window.addEventListener("keydown", (e) => {
@@ -114,7 +81,6 @@ window.addEventListener("keydown", (e) => {
 });
 
 function addTodo() {
-  const inputElement = document.querySelector(".js-name-input");
   const name = inputElement.value;
   console.log(name);
 
@@ -123,7 +89,6 @@ function addTodo() {
     return;
   }
 
-  const dateInputElement = document.querySelector(".js-due-date-input");
   const dueDate = dateInputElement.value;
   console.log(dueDate);
 
@@ -140,20 +105,11 @@ function addTodo() {
 
   saveLocalStorage(todoList);
   renderTodoList();
-  checkboxes.forEach((checkbox) => {
-    checkbox.addEventListener("change", handleCheck);
-  });
 }
 
 function saveLocalStorage(todoList) {
   localStorage.setItem("todoList", JSON.stringify(todoList));
 }
-
-const checkboxes = document.querySelectorAll(`input[type="checkbox"]`);
-
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", handleCheck);
-});
 
 function handleCheck() {
   // takes the i from the id
@@ -164,28 +120,14 @@ function handleCheck() {
   saveLocalStorage(todoList);
 }
 
-colorButtons = document.querySelectorAll(".theme");
 colorButtons.forEach((button) => {
   button.addEventListener("click", changeBackground);
 });
 
-footer = document.querySelector("footer");
-console.log(footer);
-
 function changeBackground() {
   color = this.dataset.color;
+  highlightColor = themeColors[color];
   document.body.style.backgroundColor = color;
-  if (color === "lightblue") {
-    addTodoButton.style.backgroundColor = "rgb(0, 191, 255)";
-    footer.style.backgroundColor = "rgb(0, 191, 255)";
-  } else if (color === "lightgreen") {
-    addTodoButton.style.backgroundColor = "rgb(0, 245, 0)";
-    footer.style.backgroundColor = "rgb(0, 245, 0)";
-  } else if (color === "rgb(233, 233, 144)") {
-    addTodoButton.style.backgroundColor = "rgb(207, 207, 10)";
-    footer.style.backgroundColor = "rgb(207, 207, 10)";
-  } else if (color === "rgb(228, 186, 228)") {
-    addTodoButton.style.backgroundColor = "rgb(199, 58, 199)";
-    footer.style.backgroundColor = "rgb(199, 58, 199)";
-  }
+  addTodoButton.style.backgroundColor = highlightColor;
+  footer.style.backgroundColor = highlightColor;
 }
