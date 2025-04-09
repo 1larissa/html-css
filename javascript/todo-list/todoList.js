@@ -104,10 +104,8 @@ function renderTodoList() {
     });
 }
 
-addTodo = document.querySelector(".js-add-button");
-addTodo.addEventListener("click", () => {
-  addTodo();
-});
+addTodoButton = document.querySelector(".js-add-button");
+addTodoButton.addEventListener("click", addTodo);
 
 window.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
@@ -178,16 +176,16 @@ function changeBackground() {
   color = this.dataset.color;
   document.body.style.backgroundColor = color;
   if (color === "lightblue") {
-    addTodo.style.backgroundColor = "rgb(0, 191, 255)";
+    addTodoButton.style.backgroundColor = "rgb(0, 191, 255)";
     footer.style.backgroundColor = "rgb(0, 191, 255)";
   } else if (color === "lightgreen") {
-    addTodo.style.backgroundColor = "rgb(0, 245, 0)";
+    addTodoButton.style.backgroundColor = "rgb(0, 245, 0)";
     footer.style.backgroundColor = "rgb(0, 245, 0)";
   } else if (color === "rgb(233, 233, 144)") {
-    addTodo.style.backgroundColor = "rgb(207, 207, 10)";
+    addTodoButton.style.backgroundColor = "rgb(207, 207, 10)";
     footer.style.backgroundColor = "rgb(207, 207, 10)";
   } else if (color === "rgb(228, 186, 228)") {
-    addTodo.style.backgroundColor = "rgb(199, 58, 199)";
+    addTodoButton.style.backgroundColor = "rgb(199, 58, 199)";
     footer.style.backgroundColor = "rgb(199, 58, 199)";
   }
 }
